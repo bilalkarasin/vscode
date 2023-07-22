@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_NAME_LENGTH 50
+#define MAX_BUYUKLUK 50
 
 struct Student {
-    char *name[MAX_NAME_LENGTH];
-    char *surname[MAX_NAME_LENGTH];
-    int hakemSayisi;
+    char *name[MAX_BUYUKLUK];
+    char *surname[MAX_BUYUKLUK];
+    int  hakemSayisi;
     int *hakemPuan;
     float performans;
 };
@@ -36,7 +36,7 @@ float puanHesap(struct Student ogrenci) {
 int main() {
     int hakem;
     int b;
-    char filename[MAX_NAME_LENGTH];
+    char filename[MAX_BUYUKLUK];
     int *Student;
     Student=(struct Student*)malloc(14*sizeof(struct Student));
 
@@ -101,7 +101,7 @@ int main() {
         free(student.hakemPuan);
     }
 
-    fclose(file);
+     fclose(file);
      free(Student);
 
     return 0;
